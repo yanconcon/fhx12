@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^logout/',views.logout_view),
     url(r'^user/',views.information,name='dengji'),
 	url(r'^login/$',views.login),
+    #聪爸爸写的
     url(r'^post/$',views.post),
 	
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
