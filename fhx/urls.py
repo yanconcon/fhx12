@@ -28,7 +28,8 @@ urlpatterns = [
     url(r'^signup/',views.signup),
     url(r'^logout/',views.logout_view),
     url(r'^user/',views.information,name='dengji'),
-	url(r'^login/$',views.login)
+	url(r'^login/$',views.login),
+    url(r'^post/$',views.post),
 	
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

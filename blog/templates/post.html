@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>rilegoule</title>
+
+        <link rel="stylesheet" href="../static/design/css/trumbowyg.css">
+
+        <style type="text/css">
+
+            html, body {
+
+                margin: 0;
+
+                padding: 0;
+
+                background-color: #F2F2F2;
+
+                font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+
+            }
+
+            header {
+
+                text-align: center;
+
+            }
+
+            #main {
+
+                max-width: 960px;
+
+                margin: 0 auto;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="main" role="main">
+
+            <header>
+
+
+            </header>
+
+
+
+            <form action="#">
+
+                <div id="my-editor">
+
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+        <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+
+        <script src="../static/trumbowyg.js"></script>
+
+        <script src="../static/langs/zh_cn.js"></script>
+
+        <script src="../static/plugins/upload/trumbowyg.upload.js"></script>
+
+        <script src="../static/plugins/base64/trumbowyg.base64.js"></script>
+
+        <script>
+
+            /** Default editor configuration **/
+
+            $('#my-editor').trumbowyg(
+                {
+                    //设置中文
+                    lang: 'zh_cn',
+                    // closable: true,
+                    fixedBtnPane: true,
+                    //设置颜色插件
+                    btnsAdd: ['foreColor','backColor'],
+                    btnsDef: {
+                        // 设置上传的3种方法，远程上传，本地上传，图片64位加密
+                        image: {
+                            dropdown: ['insertImage'],
+                            ico: 'insertImage'
+                        }
+                    },
+                    // Redefine the button pane
+                    btns: ['viewHTML',
+                        '|', 'formatting',
+                        '|', 'btnGrp-semantic',
+                        '|', 'link',
+                        '|', 'image',
+                        '|', 'btnGrp-justify',
+                        '|', 'btnGrp-lists',
+                        '|', 'horizontalRule']
+                }
+            );
+
+
+        </script>
+
+    </body>
+
+</html>
+

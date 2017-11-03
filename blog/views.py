@@ -86,3 +86,5 @@ def logout_view(request):
 	logout(request)
 	return redirect('home')
 
+def post(request):
+	return render(request,"post.html")
