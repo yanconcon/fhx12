@@ -21,7 +21,6 @@ def lowercase_email(email):
         else:
             email = '@'.join([email_name.lower(), domain_part.lower()])
         return email
-
 class SignupForm (forms.ModelForm):
 	
 	username =forms.CharField( 
@@ -76,8 +75,13 @@ class SignupForm (forms.ModelForm):
 			return username
 		raise forms.ValidationError("有人已经注册了这个用户名")
 		
-
-
+# class ArticleForm(foems.ModelForm);
+# 	title = forms.CharField(
+# 		label='用户名',required=True,error_messages={'required':'请填写你的标题','max_length':'最多不超过50个字符'},max_length=50,widget=forms.TextInput(attrs={'placeholder':'0~50位字母/数字/汉字'}))
+# 	zhuozhe=forms.CharField( error_messages={'required':'请填写企业名'},lable='企业名',required=True,widget=forms.TextInputInput(attrs={'placeholder':'填写正确的企业名'}))
+#
+# 	content=forms.TextInputField( error_messages={'required':'请填写正文'},lable='正文',required=True,widget=forms.TextInputInput(attrs={'placeholder':'填写正确的企业名'}))
+#
 		
 
 	
